@@ -23,9 +23,11 @@ end
 def directors_totals(nds)
   result = {}
   name_index = 0
+  grand_total = 0
   #binding.pry
   while name_index < nds.length do
-    result[nds[name_index[:name]]] = gross_for_director(nds[name_index])
+    grand_total += gross_for_director(nsd)
+    result[nds[name_index][:name]] = grand_total
     name_index += 1
   end
   result
